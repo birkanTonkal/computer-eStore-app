@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Reference Include="Karkas.CodeGeneration.Helpers">
+      <HintPath>..\..\..\..\web-technology-project\ThirdParty\Karkas.CodeGeneration.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.CodeGeneration.SqlServer">
+      <HintPath>..\..\..\..\web-technology-project\ThirdParty\Karkas.CodeGeneration.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.Core.Data.SqlServer">
+      <HintPath>..\..\..\..\web-technology-project\ThirdParty\Karkas.Core.Data.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.Core.DataUtil">
+      <HintPath>..\..\..\..\web-technology-project\ThirdParty\Karkas.Core.DataUtil.dll</HintPath>
+    </Reference>
+    <Reference Include="Karkas.Core.ExtensionsMethods">
+      <HintPath>..\..\..\..\web-technology-project\ThirdParty\Karkas.Core.ExtensionsMethods.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>
