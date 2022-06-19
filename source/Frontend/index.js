@@ -3,6 +3,7 @@ let allProducts;
 async function getAllProducts () {
    let response = await fetch(url)
    allProducts = await response.json()
+   console.log(allProducts)
    for (const iterator of allProducts) {
     console.log(iterator.price)
 }

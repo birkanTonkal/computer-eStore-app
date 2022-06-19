@@ -8,7 +8,7 @@ string dbProviderName = "Microsoft.Data.SqlClient";
 DbProviderFactories.RegisterFactory(dbProviderName, SqlClientFactory.Instance);
 DbProviderFactories.RegisterFactory("System.Data.SqlClient", SqlClientFactory.Instance);
 
-string connectionString = "Data Source=localhost;Initial Catalog=SHOP;Persist Security Info=True;User ID=sa;Password=yourStrong2022Password;Encrypt=False";
+string connectionString = "Data Source=127.0.0.1,1453;Initial Catalog=SHOP;Persist Security Info=True;User ID=sa;Password=yourStrong2022Password;Encrypt=False";
 ConnectionSingleton.Instance.AddConnection("Shop", dbProviderName, connectionString);
 
 var builder = WebApplication.CreateBuilder(args);
