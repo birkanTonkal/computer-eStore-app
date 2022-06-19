@@ -11,17 +11,16 @@ addProduct.addEventListener("click", async () => {
     let type = document.getElementById("type").value;
     let cpu = document.getElementById("cpu").value;
     let ram = document.getElementById("ram").value;
-    alert(ram);
     let stock = document.getElementById("stock").value;
     let otherFeatures = document.getElementById("otherFeatures").value
     stock = parseInt(stock)
+    console.log(graphicCard)
     let product = {
         "rowState": 1,
-        "productKey":"3680534c-4c62-4ab5-9b63-7fc2260147ea",
+        "productKey":userKey,
         "title": title,
         "price": price,
         "type": type,
-        "dateCreated": date,
         "graphicCard": graphicCard,
         "cpu": cpu,
         "ram": ram,
