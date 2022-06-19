@@ -10,6 +10,7 @@ addProduct.addEventListener("click", async () => {
     let type = document.getElementById("type").value;
     let cpu = document.getElementById("cpu").value;
     let ram = document.getElementById("ram").value;
+    alert(ram);
     let stock = document.getElementById("stock").value;
     console.log(stock)
     let product = {

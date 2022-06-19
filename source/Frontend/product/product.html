@@ -5,30 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Product</title>
-    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="./product.css">
 </head>
 <body>
-    <form class="product">
-    <label for="title">title</label>
-    <input type="text" name="" id="title">
-    <label for="title">price</label>
-    <input type="text" name="" id="price">
-    <label for="title">type</label>
-    <input type="text" name="" id="type">
-    <label for="title">graphicCard</label>
-    <input type="text" name="" id="graphicCard">
-    <label for="title">cpu</label>
-    <input type="text" name="" id="cpu">
-    <label for="title">ram</label>
-    <input type="text" name="" id="ram">
-    <label for="title">stock</label>
-    <input type="text" name="" id="stock">
-    <label for="title">otherFeatures</label>
-    <input type="text" name="" id="otherFeatures">
-    <button id="addProduct">add Product</button>
-    </form>
+    <h1>Product Information</h1>
+    <div class="flex-container">
+        
+        <div id="form-style">
+        
+        <form class="product">
+        <label for="title">Title</label>
+        <input type="text" name="" id="title">
+        <label for="title">Price</label>
+        <input type="text" name="" id="price">
+        <label for="title">Type</label>
+        <select name="field1" class="select-field" id="type">
+            <option value="Desktop">Desktop</option>
+            <option value="Laptop">Laptop</option>
+            </select>
+        <label for="title">Graphic Card</label>
+        <input type="text" name="" id="graphicCard">
+        <label for="title">Cpu</label>
+        <input type="text" name="" id="cpu">
+        <label for="title">Ram</label>
+    
+        <select name="field2" class="select-field" id="ram">
+            <option value="8GB">8GB</option>
+            <option value="16GB">16GB</option>
+            <option value="32GB">32GB</option>
+        </select>
+        <label for="title">Stock</label>
+        <input type="text" name="" id="stock">
+        </form>
+        </div>
+        <div class="extra-info">
+            <form  class="product">
+                <br>
+              <label for="title">Other features:</label>
+              <textarea rows="50" cols="100" name="comment" form="usrform" id="otherFeatures"></textarea>
+              <button id="addProduct">Add Product</button>
+            </form>
 
+        </div>
+
+    </div>
+    
+
+        
    
 </body>
-<script type="module" src="/Frontend/product/product.js"></script>
+<script type="module" src="./product.js"></script>
 </html>
