@@ -1,5 +1,5 @@
 import {guidGenerator} from '../helpers/guidGenerator.js'
-console.log("sadsadsadsa")
+let user2 = "null"
 let count = 1
 let url = "http://localhost:5102/api/User"
 const signUpButton = document.getElementById('submitRegister');
@@ -22,10 +22,12 @@ signInButton.addEventListener("click", async (e) => {
     let response = await fetch(url)
     let allUsers = await response.json()
     for (const iterator of allUsers) {
-      console.log(email)
-       console.log(password)
+      console.log(iterator)
+
       if (iterator.password == password && iterator.email == email) {
-        console.log(window.location.href)
+        console.log(iterator.usersKey)
+        sessionStorage.setItem('userType', iterator.userType);
+        sessionStorage.setItem('usersKey', iterator.usersKey);
         window.location.href = "../index.html"
        }
     }
@@ -51,7 +53,10 @@ signUpButton.addEventListener('click', async (e) => {
         body: JSON.stringify(user)
     }).then((response) => {
         console.log(response)
-        if (response.status == 200){window.location.href = "../login/login.html"}
+        if (response.status == 200){
+          window.location.href = "../login/login.html"
+          user2 = user.userType
+        }
     })
 });
 const element = document.querySelector('form');
