@@ -1,0 +1,63 @@
+
+
+.container-contact{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+    background-color: #fefffa;
+}
+.container-contact .container-item{
+    flex-grow: 1;
+}
+
+.container-contact .container-item h2{
+    color: #2f7390;
+
+}
+
+.container-item .image img{
+    padding-top: 10px;
+    width: 48px;
+    height: 48px;
+}
+
+.container-contact i{
+    font-size: 50px;
+    color: #2f7390;
+}
+
+.container-contact h2{
+    font-size:25px;
+    font-family:'Libre Baskerville', serif;
+    font-family: 'Patrick Hand', cursive;
+    text-decoration: underline  #2f7390 3px;
+
+}
+
+.container-contact p{
+    font-size:20px;
+    font-family:'Libre Baskerville', serif;
+    font-family: 'Patrick Hand', cursive;
+}
+
+.map{
+    background-color: #fefffa;
+    height: 40%;
+    overflow:hidden;
+    padding-top: 10%;
+    padding-bottom:30%;
+    position:relative;
+    height:0;
+}
+
+#googlemaps{
+ 
+    left:15%;
+    right: 10%;
+    top:50px;
+    height:70%;
+    width:70%;
+    position:absolute;
+}

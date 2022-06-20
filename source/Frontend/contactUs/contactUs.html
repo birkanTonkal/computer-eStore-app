@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contactUs.css">
+    <link rel="stylesheet" href="../index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js%22%3E"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="header">
+
+        <a href="#default" class="logo"><img id="deviceLogo" src="../devices.png">ComputerMarkt</a>
+        <div class="header-right">
+          <a id="navust" class="active" href="../login/login.html">Sign In</a>
+          <a  href="#">Support</a>
+          <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <img id="shopp-cart" src="../shopping-cart.png" alt="">
+      
+        </div>
+      </div>
+     <!--Main Section:Contact Us-->
+     <div class="container-contact">
+        <div class="container-item">
+            <div class="image">
+                <a href=""><i class="fa-solid fa-location-dot"></i></a>
+            </div>
+            <h2>Address</h2>
+            <p>Kardelen, Başkent Bulvarı 224H, AVM, 06370
+            <br>
+            Batıkent/Ankara</p>
+        </div>
+        <div class="container-item">
+            <div class="image">
+                <a href=""><i class="fa-solid fa-phone"></i></a>
+            </div>
+            <h2>Phone</h2>
+            <p>Telefon: +90 530 238 05 00</p>
+        </div>
+        </div>
+        <div class="container-contact">
+        <div class="container-item">
+            <div class="image">
+                <a href=""><i class="fa-solid fa-envelope"></i></a>
+            </div>
+            <h2>Email</h2>
+            <p>computermarkt@gmail.com
+            </p>
+    </div>
+</div>
+
+
+<!--Google maps-->
+<div class="map"> 
+    <iframe id="googlemaps" src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12230.853606018569!2d32.715105!3d39.97016!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xcd6ac6d461079c38!2sMediaMarkt%20Atlantis!5e0!3m2!1str!2str!4v1655560001848!5m2!1str!2str" ></iframe>
+</div>
+
+
+<footer style="margin-top:0px" id="colophon" class="site-footer" role="contentinfo">
+    <div class="social-wrapper">
+      <ul>
+        <li>
+          <a href="#" target="_blank">
+            <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+        </li>
+
+        <li>
+          <a href="#" target="_blank">
+            <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+        </li>
+
+      </ul>
+    </div>
+ <nav class="footer-nav" role="navigation">
+      <p>Copyright &copy; 2022-
+        <?php echo date("Y"); ?> ComputerMarkt. All rights reserved.</p>
+    </nav>
+  </footer>
+</body>
+</html>

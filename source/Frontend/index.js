@@ -1,7 +1,7 @@
 let url = "http://localhost:5102/api/Product";
 let cartUrl = "http://localhost:5102/api/Cart";
 let allProducts;
-let goCart = document.getElementById("cart")
+let goCart = document.getElementById("cart");
 let products = document.getElementById("products");
 let addProduct = document.getElementById("addProduct");
 let cart = document.getElementById("cart");
@@ -13,7 +13,9 @@ if (sessionStorage.getItem("userType") == "normal") {
 goCart.addEventListener("click", () => {
     window.location.href = "./cart/cart.html"
 }) 
-    
+/*
+
+*/
 
 addProduct.addEventListener("click", () => {
     window.location.href = "./product/product.html"
@@ -22,13 +24,30 @@ async function getAllProducts() {
     let response = await fetch(url);
     allProducts = await response.json();
     console.log(allProducts);
-    for (const iterator of allProducts) {
-        var product = document.createElement("div");
-        product.className = "product";
-        product.innerHTML = `<h1 >${iterator.title}</h1><h2>${iterator.price}</h2><p class="productKey" style="display:none">${iterator.productKey}</p><button class="addCart">addCart</button>`;
-        products.appendChild(product);
-      
+    let i=0;
+    const images = ["casper.png", "devices.png", "devices.png","devices.png","devices.png"];
+    if (sessionStorage.getItem("userType") == "normal") {
+        for (const iterator of allProducts) {
+            var container = document.createElement("div");
+            container.className = "container";
+            container.innerHTML = `<div class="container page-wrapper"><div class="page-inner"><div class="row"><div class="el-wrapper"><div class="box-up"><img class="img" src=${images[i]} ;alt="photo"><div class="img-info"><div class="info-inner"><span class="p-name">${iterator.title}</span><p class="productKey" style="display:none"><span class="p-company">${iterator.type}</span></div><div class="a-size">Features:<span class="size">${iterator.ram}</span></div></div></div><div class="box-down"><div class="h-bg"><div class="h-bg-inner"></div></div><a class="cart" href="#"><span class="price">${iterator.price}₺</span><button class="addCart"><span class="txt">Add in cart</span></button></a></div></div></div></div></div>`
+            products.appendChild(container); 
+            i++;
     }
+    }else {
+       
+        products.innerHTML='<h1>ALL PRODUCTS</h1><br><table><tr><th width="14.28%">Title</th><th width="14.28%">Price</th><th width="14.28%">Type</th><th width="14.28%">Ram</th><th width="14.28%">Graphic Card</th><th width="14.28%">CPU</th><th width="14.28%" >Stock</th></tr></table>'
+
+        for (const iterator of allProducts) {
+            var product = document.createElement("div");
+            product.className = "product";
+            product.innerHTML = `<table><tr><td>${iterator.title}</td><td>${iterator.price}</td><td>${iterator.type}</td><td>${iterator.ram}</td><td>${iterator.graphicCard}</td><td>${iterator.cpu}</td><td>${iterator.stock}</td></tr></table>
+            <p class="productKey" style="display:none">${iterator.productKey}</p>`;
+            products.appendChild(product);
+          
+        }
+    }
+
     let addCarts = document.querySelectorAll(".addCart")
     let div_array = [...addCarts];
     div_array.forEach(element =>  {

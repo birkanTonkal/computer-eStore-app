@@ -4,12 +4,66 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Cart</title>
 </head>
 <body>
+    <div class="header">
+
+        <a href="#default" class="logo"><img id="deviceLogo" src="../devices.png">ComputerMarkt</a>
+        <div class="header-right">
+          <a id="navust" class="active" href="#home">Sign In</a>
+          <a  href="../contactUs/contactUs.html">Support</a>
+          <div class="search-container">
+          <form action="/action_page.php">
+            <input type="text" placeholder="Search.." name="search">
+            <button type="submit" id="searchButton"><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+        <button style="border: transparent;" id ="cart"> <img id="shopp-cart" src="../shopping-cart.png" alt=""></button>
+      
+        </div>
+      </div>
+    <div class="box">
     <div id="product">
+        <h1 style="margin-left: 300px;">Shopping Cart</h1>
+    </div>
+    <div id="totalPrice">
+         
+    </div>
+   <button onclick="alert('Payed successfully!')" class="payButton" style="vertical-align:middle"><span>PAY </span></button>
 
     </div>
+
+    <footer style="margin-top:0px" id="colophon" class="site-footer" role="contentinfo">
+        <div class="social-wrapper">
+          <ul>
+            <li>
+              <a href="#" target="_blank">
+                <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/twitter-128.png" alt="Twitter Logo" class="twitter-icon"></a>
+            </li>
+            <li>
+              <a href="#" target="_blank">
+                <img src="https://www.mchenryvillage.com/images/instagram-icon.png" alt="Instagram Logo" class="instagram-icon"></a>
+            </li>
+    
+            <li>
+              <a href="#" target="_blank">
+                <img src="http://www.iconarchive.com/download/i54037/danleech/simple/facebook.ico" alt="Facebook Logo" class="facebook-icon"></a>
+            </li>
+    
+          </ul>
+        </div>
+     <nav class="footer-nav" role="navigation">
+          <p style="color:black">Copyright &copy; 2022-
+            <?php echo date("Y"); ?> ComputerMarkt. All rights reserved.</p>
+        </nav>
+      </footer>
+      
+      
+
+
 </body>
-<script type="module" src="/Frontend/cart/cart.js"></script>
+<script type="module" src="cart.js"></script>
 </html>

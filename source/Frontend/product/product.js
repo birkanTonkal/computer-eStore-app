@@ -37,7 +37,10 @@ addProduct.addEventListener("click", async () => {
             body: JSON.stringify(product)
         }).then((response) => {
             console.log(response)
-            if (response.status == 200){console.log("succesfull")}
+            if (response.status == 200){
+                alert("product added successfully!");
+                console.log("successfull")}
+            
         })
     }
    
