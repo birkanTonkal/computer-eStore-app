@@ -99,6 +99,25 @@ table {
   }
 #products{
     margin-top: 20px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete{
+  padding: 5px;
+  border: 1px transparent ;
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  float: right;
+  color: white;
+  background-color: #DC2C1A;
+  cursor: pointer;
+}
+.delete:hover{
+  opacity: 0.8;
+
 }
 h1{
     float: left;
@@ -415,7 +434,7 @@ body {
     text-align: center;
 }
 
-/*Social Media Icons*/
+/Social Media Icons/
 .social-wrapper {
     text-align: center;
 }
