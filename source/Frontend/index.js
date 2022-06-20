@@ -35,12 +35,22 @@ async function getAllProducts() {
         "devices.png",
     ];
     if (sessionStorage.getItem("userType") == "normal") {
+        const params = new Proxy(new URLSearchParams(window.location.search), {
+            get: (searchParams, prop) => searchParams.get(prop),
+          });
+          // Get the value of "some_key" in eg "https://example.com/?some_key=some_value"
+          let value = params.type; // "some_value"
         for (const iterator of allProducts) {
-            var container = document.createElement("div");
-            container.className = "container";
-            container.innerHTML = `<div class="container page-wrapper"><div class="page-inner"><div class="row"><div class="el-wrapper"><div class="box-up"><img class="img" src=${images[i]} ;alt="photo"><div class="img-info"><div class="info-inner"><span class="p-name">${iterator.title}</span><p class="productKey" style="display:none"><span class="p-company">${iterator.type}</span></div><div class="a-size">Features:<span class="size">${iterator.ram}</span></div></div></div><div class="box-down"><div class="h-bg"><div class="h-bg-inner"></div></div><a class="cart" href="#"><span class="price">${iterator.price}₺</span><button id=${iterator.productKey} class="addCart"><span class="txt">Add in cart</span></button></a></div></div></div></div></div>`;
-            products.appendChild(container);
-            i++;
+            console.log(iterator.type)
+            console.log(value)
+            if ((iterator.type).toLowerCase() == value) {
+                var container = document.createElement("div");
+                container.className = "container";
+                container.innerHTML = `<div class="container page-wrapper"><div class="page-inner"><div class="row"><div class="el-wrapper"><div class="box-up"><img class="img" src=${images[i]} ;alt="photo"><div class="img-info"><div class="info-inner"><span class="p-name">${iterator.title}</span><p class="productKey" style="display:none"><span class="p-company">${iterator.type}</span></div><div class="a-size">Features:<span class="size">${iterator.ram}</span></div></div></div><div class="box-down"><div class="h-bg"><div class="h-bg-inner"></div></div><a class="cart" href="#"><span class="price">${iterator.price}₺</span><button id=${iterator.productKey} class="addCart"><span class="txt">Add in cart</span></button></a></div></div></div></div></div>`;
+                products.appendChild(container);
+                i++;
+            }
+            
         }
     } else {
         products.innerHTML =
