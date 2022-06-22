@@ -30,16 +30,14 @@
 
 .container-contact h2{
     font-size:25px;
-    font-family:'Libre Baskerville', serif;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Titillium Web', sans-serif;
     text-decoration: underline  #2f7390 3px;
 
 }
 
 .container-contact p{
     font-size:20px;
-    font-family:'Libre Baskerville', serif;
-    font-family: 'Patrick Hand', cursive;
+    font-family: 'Titillium Web', sans-serif;
 }
 
 .map{

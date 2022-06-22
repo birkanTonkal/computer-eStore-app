@@ -1,22 +1,31 @@
 * {box-sizing: border-box;}
-
+body{
+	background-color: #fdf9f900;
+}
 body { 
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
 
 #deviceLogo{
   padding-right: 15px;
-  height: 50px;
-  width: 70px;
+  height: 90px;
+  width: 100px;;
 }
 .header {
   overflow: hidden;
-  background-color: #f1f1f1;
+  background-color: #F5EEF8;
   padding: 20px 10px;
+  padding-bottom: 20px;
 }
 .header-right{
   padding-top: 20px;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 500;
+}
+#baslik{
+	font-family: 'Titillium Web', sans-serif;
+	
 }
 
 .header a {
@@ -33,16 +42,15 @@ body {
 .header a.logo {
   font-size: 40px;
   font-weight: bold;
-  padding-bottom: 20px;
+ margin-top: 0px;
+ padding-top: 0px;
+  height: 90px;
+  
 }
 
-.header a:hover {
-  background-color: #ddd;
-  color: black;
-}
 
 .header a.active {
-  background-color: dodgerblue;
+  background-color: #7FB3D5 ;
   color: white;
 }
 .search-container {
@@ -79,26 +87,48 @@ margin-left: 650px;
 
 table {
    
-    font-family: arial, sans-serif;
+  font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 100%;
   }
-  
+  tr{
+    padding-right: 7px;
+    max-width: 18.9%;
+  }
   td {
     border: 1px solid #dddddd;
     text-align: left;
      width: 60px;
-    padding: 8px;
+    padding: 5px;
   }
   th{
    border: 1px transparent #dddddd;
     text-align: left;
     padding: 10px;
-    background-color: rgb(10, 101, 101);
+    background-color: #7FB3D5 ;
     color: white;
   }
 #products{
     margin-top: 20px;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.delete{
+  padding: 5px;
+  border: 1px transparent ;
+  border-radius: 5px;
+  margin-top: 7px;
+  margin-bottom: 7px;
+  float: right;
+  color: white;
+  background-color: #DC2C1A;
+  cursor: pointer;
+}
+.delete:hover{
+  opacity: 0.8;
+
 }
 h1{
     float: left;
@@ -305,7 +335,7 @@ body {
 }
 
 .info-inner .p-company {
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
   font-size: 12px;
   text-transform: uppercase;
   color: #8c8c8c;
@@ -325,7 +355,7 @@ body {
   position: absolute;
   width: 100%;
   bottom: -20px;
-  font-family: 'PT Sans', sans-serif;
+  font-family: arial, sans-serif;
   color: #828282;
   opacity: 0;
 }
@@ -341,7 +371,7 @@ body {
   height: 100%;
   top: 0;
   left: 0;
-  font-family: 'Lato', sans-serif;
+  font-family: arial, sans-serif;
   font-weight: 700;
 }
 
@@ -404,7 +434,7 @@ body {
 }
 
 .site-footer {
-  background-color: #f1f1f1;
+  background-color: #F5EEF8;
   margin: top 100px; ;
     text-align: center;
     margin-top:150px;

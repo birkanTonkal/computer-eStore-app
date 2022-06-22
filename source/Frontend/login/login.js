@@ -28,7 +28,7 @@ signInButton.addEventListener("click", async (e) => {
         console.log(iterator.usersKey)
         sessionStorage.setItem('userType', iterator.userType);
         sessionStorage.setItem('usersKey', iterator.usersKey);
-        window.location.href = "../index.html"
+        window.location.href = "../home/home.html"
        }
     }
 })
